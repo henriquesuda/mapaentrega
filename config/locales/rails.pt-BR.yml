@@ -137,6 +137,7 @@ pt-BR:
       destroy: "Apagar"
       cancel: "Cancelar"
       back: "Voltar"
+      confirm: "Realmente deseja fazer isso?"
     actions: "Ações"
   number:
     currency:
