@@ -1,4 +1,6 @@
 Mapaentrega::Application.routes.draw do
+  resources :empresas
+
   resources :usuarios
 
   # The priority is based upon order of creation:

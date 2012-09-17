@@ -1,9 +1,10 @@
-<%= form_for @usuario do |f| %>
+<%= form_for @empresa do |f| %>
   <%= f.text_field :nome %>
-  <%= f.text_field :email %>
+  <%= f.text_field :cnpj %>
+  <%= f.text_field :identificador %>
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                usuarios_path, :class => 'btn' %>
+                empresas_path, :class => 'btn' %>
   </div>
 <% end %>
