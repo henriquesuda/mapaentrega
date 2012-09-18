@@ -6,10 +6,10 @@
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:tipo) %></th>
-      <th><%= model_class.human_attribute_name(:identificador) %></th>
       <th><%= model_class.human_attribute_name(:usuario_id) %></th>
       <th><%= model_class.human_attribute_name(:empresa_id) %></th>
+      <th><%= model_class.human_attribute_name(:tipo) %></th>
+      <th><%= model_class.human_attribute_name(:identificador) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -18,10 +18,10 @@
     <% @colaboradores.each do |colaborador| %>
       <tr>
         <td><%= link_to colaborador.id, colaborador_path(colaborador) %></td>
-        <td><%= colaborador.tipo %></td>
-        <td><%= colaborador.identificador %></td>
         <td><%= colaborador.usuario.nome %></td>
         <td><%= colaborador.empresa.nome %></td>
+        <td><%= TIPO_COLABORADOR[colaborador.tipo] %></td>
+        <td><%= colaborador.identificador %></td>
         <td><%=l colaborador.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),

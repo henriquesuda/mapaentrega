@@ -9,7 +9,7 @@
   <dt><strong><%= model_class.human_attribute_name(:usuario_id) %>:</strong></dt>
   <dd><%= @colaborador.usuario.nome %></dd>
   <dt><strong><%= model_class.human_attribute_name(:tipo) %>:</strong></dt>
-  <dd><%= @colaborador.tipo %></dd>
+  <dd><%= TIPO_COLABORADOR[@colaborador.tipo] %></dd>
   <dt><strong><%= model_class.human_attribute_name(:identificador) %>:</strong></dt>
   <dd><%= @colaborador.identificador %></dd>
 </dl>
