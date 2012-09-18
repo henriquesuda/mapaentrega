@@ -3,6 +3,4 @@ class Colaborador < ActiveRecord::Base
 
   belongs_to :usuario
   belongs_to :empresa
-
-  STATUS = [['Active', 'active'], ['In Active', 'inactive']]
 end

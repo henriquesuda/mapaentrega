@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(:version => 20120917234725) do
 
-  create_table "colaboradors", :force => true do |t|
+  create_table "colaboradores", :force => true do |t|
     t.integer  "tipo"
     t.string   "identificador"
     t.integer  "usuario_id"

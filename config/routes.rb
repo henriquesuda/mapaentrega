@@ -1,7 +1,7 @@
 Mapaentrega::Application.routes.draw do
   get "inicio/index"
 
-  resources :colaboradors
+  resources :colaboradores
 
   resources :empresas
 
