@@ -1,3 +1,5 @@
+#encoding: utf-8
+
 class ColaboradoresController < ApplicationController
   # GET /colaboradores
   # GET /colaboradores.json
@@ -44,7 +46,7 @@ class ColaboradoresController < ApplicationController
 
     respond_to do |format|
       if @colaborador.save
-        format.html { redirect_to @colaborador, notice: 'Colaborador was successfully created.' }
+        format.html { redirect_to @colaborador, notice: t("flash.actions.create.notice", :model => "Colaborador") }
         format.json { render json: @colaborador, status: :created, location: @colaborador }
       else
         format.html { render action: "new" }
@@ -60,7 +62,7 @@ class ColaboradoresController < ApplicationController
 
     respond_to do |format|
       if @colaborador.update_attributes(params[:colaborador])
-        format.html { redirect_to @colaborador, notice: 'Colaborador was successfully updated.' }
+        format.html { redirect_to @colaborador, notice: t("flash.actions.update.notice", :model => "Colaborador") }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -76,7 +78,7 @@ class ColaboradoresController < ApplicationController
     @colaborador.destroy
 
     respond_to do |format|
-      format.html { redirect_to colaboradores_url }
+      format.html { redirect_to colaboradores_url, notice: t("flash.actions.destroy.notice", :model => "Colaborador") }
       format.json { head :no_content }
     end
   end

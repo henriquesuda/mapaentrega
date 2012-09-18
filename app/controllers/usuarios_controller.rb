@@ -1,3 +1,5 @@
+#encoding: utf-8
+
 class UsuariosController < ApplicationController
   # GET /usuarios
   # GET /usuarios.json
@@ -44,7 +46,7 @@ class UsuariosController < ApplicationController
 
     respond_to do |format|
       if @usuario.save
-        format.html { redirect_to @usuario, notice: 'Usuario criado com sucesso.' }
+        format.html { redirect_to @usuario, notice: t("flash.actions.create.notice", :model => "Usuário") }
         format.json { render json: @usuario, status: :created, location: @usuario }
       else
         format.html { render action: "new" }
@@ -60,7 +62,7 @@ class UsuariosController < ApplicationController
 
     respond_to do |format|
       if @usuario.update_attributes(params[:usuario])
-        format.html { redirect_to @usuario, notice: 'Usuario atualizado com sucesso.' }
+        format.html { redirect_to @usuario, notice: t("flash.actions.update.notice", :model => "Usuário") }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -76,7 +78,7 @@ class UsuariosController < ApplicationController
     @usuario.destroy
 
     respond_to do |format|
-      format.html { redirect_to usuarios_url, notice: 'Usuario excluido com sucesso.' }
+      format.html { redirect_to usuarios_url, notice: t("flash.actions.destroy.notice", :model => "Usuário") }
       format.json { head :no_content }
     end
   end

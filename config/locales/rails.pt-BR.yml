@@ -216,3 +216,12 @@ pt-BR:
   attributes:
     created_at: "Criado em"
     updated_at: "Atualizado em"
+  flash:
+    actions:
+      create:
+        notice: "%{model} foi criado(a) com sucesso."
+      update:
+        notice: "%{model} foi atualizado(a) com sucesso."
+      destroy:
+        notice: "%{model} foi excluido(a) com sucesso."
+        alert: "%{model} não pode ser excluido(a)."
