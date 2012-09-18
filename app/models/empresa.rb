@@ -5,4 +5,8 @@ class Empresa < ActiveRecord::Base
   validates :cnpj, :presence => true, :uniqueness => true
 
   usar_como_cnpj :cnpj
+
+  has_many :colaboradors
+  has_many :usuarios, :through => :colaboradors
+
 end

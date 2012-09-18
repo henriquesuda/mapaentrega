@@ -1,4 +1,6 @@
 Mapaentrega::Application.routes.draw do
+  resources :colaboradors
+
   resources :empresas
 
   resources :usuarios

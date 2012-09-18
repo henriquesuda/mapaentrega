@@ -3,4 +3,8 @@ class Usuario < ActiveRecord::Base
 
   validates :email, :presence => true, :uniqueness => true
   validates :nome, :presence => true
+
+  has_many :colaboradors
+  has_many :empresas, :through => :colaboradors
+
 end

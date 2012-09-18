@@ -1,0 +1,11 @@
+<%= form_for @colaborador do |f| %>
+	<%= f.select :empresa_id, Empresa.find(:all).collect { |item| [item.nome,item.id] } %>
+	<%= f.select :usuario_id, Usuario.find(:all).collect { |item| [item.nome,item.id] } %>
+  <%= f.text_field :identificador %>
+  <%= f.select :tipo, [['Administrador', 1], ['Executor', 2]] %>
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                colaboradors_path, :class => 'btn' %>
+  </div>
+<% end %>
